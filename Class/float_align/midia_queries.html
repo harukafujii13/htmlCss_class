@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midia Queries</title>
+    <style>
+        h1 {
+            display: none;
+        }
+
+        /*
+        Midia Types
+        
+        - all -apply to all types of media
+        - print - used specifically for printers
+        - screen -targetting a specific type of screen (pc, tablets, phones)
+        - speach - screen readers
+        - screen - mostly commonly used type
+
+        Media features
+        - width
+        - device-width
+        - resolution
+        - orientation
+        - scan
+        - aspect-ratio
+
+        - min-* / max-*
+
+        Logical operators
+
+        - not (must specify a media type)
+        - and
+        - only
+
+        */
+
+        /*mobile*/
+        /* apply to all */
+        @media screen and (max-width: 500px) {
+            body {
+                background-color: orange;
+            }
+            #mobile h1 {
+                display: block;
+            }
+        }
+
+        /* tablet */
+        @media screen and (min-width: 500px) and (max-width: 789px) {
+           body{
+                background-color: blue;
+           }
+            #tablet h1 {
+                display: block;
+            }
+        }
+
+        /* Widescreen */
+        @media screen and (min-width: 769px) {
+           body{
+                background-color: green;
+                color: white;
+           }
+            #nomal h1 {
+                display: block;
+            }
+        }
+
+        /* Normal */
+        @media screen and (min-width: 1400px) {
+           body{
+                background-color: red;
+                color: white;
+           }
+            #width h1 {
+                display: block;
+            }
+        }
+
+        /* Landscape */
+        @media (max-height: 500px){
+            body{
+                background-color: #333;
+            }
+            #landscape h1 {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="widescreen">
+        <h1>Widescreen</h1>
+    </div>
+    <div id="normal">
+        <h1>Normal</h1>
+    </div>
+    <div id="table">
+        <h1>Table</h1>
+    </div>
+    <div id="mobile">
+        <h1>Mobile</h1>
+    </div>
+    <div id="landscape">
+        <h1>Landscape</h1>
+    </div>
+</body>
+</html>

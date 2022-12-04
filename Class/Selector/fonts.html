@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto:ital@1&family=Teko&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background-color: rgb(230, 179, 179);
+            /* font-family: Arial, Helvetica, sans-serif; */
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            line-height: 1.6em;
+        }
+
+        .primary-heading {
+            color: blue;
+        }
+
+        #welcome {
+            background-color: #f4f4f4;
+        }
+
+        p {
+            font-size: larger;
+            color: blueviolet;
+        }
+
+        #welcome, #about {
+            border: 1px solid red;
+            border-radius: 10px;
+        }
+
+        /*Nested Selectors*/
+        #welcome p {
+            color: black;
+        }
+
+        #welcome p span {
+            font-weight: bolder;
+        }
+
+        
+    </style>
+    
+</head>
+<body>
+    <div id="welcome">
+        <h2 class="primary-heading">Welcome</h2>
+        <p>Lorem ipsum <span>sit</span> amet.</p>
+    </div>
+    <div id="about">
+        <h2>About</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et quas architecto aliquam, tempora recusandae asperiores hic consectetur corrupti debitis dolores necessitatibus adipisci earum, perferendis magni repellendus ab id odio enim.</p>
+    </div>
+</body>
+</html>
