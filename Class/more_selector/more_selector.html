@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    html {
+        font-size: 20px;
+    }
+    p > span {
+        color: orange;
+    }
+
+    p + span {
+        color: blue;
+    }
+
+    p ~ span {
+        color: green;
+    }
+
+    a[href] {
+        color: purple;
+    }
+
+    a[href="http://www.google.com"] {
+        color: royalblue;
+    }
+
+    /*[attr="value"]*/
+
+    /*div[attr="value"]
+    .item[attr=":value"]
+    #header[attr="value"]*/
+    
+</style>
+<body>
+    <span>Greeting!</span>
+    <p>
+        The city I livingin is:
+        <span class="city">Vancouver</span>
+        <strong>
+            <span>!!!!</span>
+        </strong>
+        <span>?</span>
+    </p>
+
+    <span>A second span</span>
+    <span>A third span</span>
+    <br>
+    <br>
+    <a href="http://www.google.com">Go to Google</a>
+    <br>
+    <a href="/">Home</a>
+
+    <br>
+    <img src="." alt="">
+
+</body>
+</html>

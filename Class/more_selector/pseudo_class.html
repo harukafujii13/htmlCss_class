@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* a:hover
+    a:any-link
+    a:visited
+    a:active 
+    */
+
+    input[type="email"]:focus{
+        border: 5px solid green;
+    }
+
+    /* :target
+    :enabled 
+    :disabled
+    */
+
+    input:disabled {
+        opacity: 50%;
+    }
+
+    input:checked ~ label {
+        font-weight: 900;
+    }
+
+    /* :required
+    :optional 
+    */
+
+    :root {
+        background-color: coral;
+    }
+
+    /* :first-child */
+    li:first-child{
+        color: white;
+    }
+
+    li:last-child{
+        color: yellow;
+    }
+
+    /*  :nth-child(n) */
+    li:nth-child(2){
+        color: indigo;
+    }
+
+    li:nth-child(even){
+        background-color: #f4f4f4;
+    }
+
+    /* an+b */
+    li:nth-child(2n+5){
+        font-size: 1.5rem;
+    }
+
+    li:first-of-type{
+        font-weight: bold;
+    }
+
+    li:not(.first-item){
+        color: pink;
+    }
+
+</style>
+<body>
+    <input type="text" placeholder="Text">
+    <input type="email" placeholder="Email" disabled>
+    <br>
+    <br>
+    <label">Checkbox1</label>
+    <input type="checkbox" name="" id="" required>
+    <br>
+    <label">Checkbox2</label>
+    <input type="checkbox" name="" id="" checked>
+
+    <!-- <ul>
+        <li>Item 0</li>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+    </ul> -->
+
+    <ul>
+        <li class="first-item">This is some text</li>
+        <li>Lorem ipsum dolor <span> sit amet.</span></li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, qui.</li>
+
+    </ul>
+</body>
+</html>

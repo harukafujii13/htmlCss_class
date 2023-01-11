@@ -1,0 +1,30 @@
+
+
+
+//using @use with alias
+@import 'var/colors';
+@import 'vars/fonts';
+@import 'var/my_component_for_phone_size';
+
+
+
+h1 {
+    color: colors.$h1-color;
+    font-size: fonts.$large-font;
+    background-color: comp.$color-primary;
+}
+
+//using @forward
+
+@use 'vars' as *;
+
+@use 'var/colors' as *;
+@use 'vars/fonts' as *;
+@use 'var/my_component_for_phone_size' as comp;
+
+h1 {
+    color: $h1-color;
+    font-size: $large-font;
+    background-color: $color-primary;
+}
+

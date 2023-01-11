@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #333;
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        position: absolute;
+
+        animation-name: animate1;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes animate1 {
+        from {
+            top: 0;
+        }
+
+        to{
+            width: 600px;
+            background-color: pink;
+            top: 200px;
+        }
+    }
+
+    @keyframes animate2 {
+        0% {
+            left: 0;
+            top: 0;
+            background-color: palevioletred;
+            border-radius: 0 0 0 0 ;
+        }
+
+        25% {
+            left: 300px;
+            top: 300px;
+            background-color: palevioletred;
+            border-radius: 50% 0 0 0 ;
+        }
+
+        25% {
+            left: 0;
+            top: 300px;
+            background-color: green;
+            border-radius: 50% 0 0 0 ;
+        }
+
+    }
+</style>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

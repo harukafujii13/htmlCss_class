@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 
+    ::first-letter
+    ::first-line
+    ::before
+    ::after
+    */
+
+    p::first-letter {
+        font-size: 2rem;
+        color: red;
+
+    }
+
+    p::first-line {
+        font-weight: 600;
+    }
+
+
+    /* content property is required */
+    div::before{
+        content: "<before>";
+        background-color: yellow;
+    
+    }
+
+    div::after {
+        content: "<after>";
+    }
+
+    h1::before {
+        content: url('./assets/img/leaf');
+        position: absolute;
+    }
+
+    
+</style>
+<body>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, modi.Lorem15
+    <div>
+        <!-- before -->
+        This is a div</div>
+        <!-- after -->
+  </p>
+
+  <h1>Leaf</h1>
+</body>
+</html>

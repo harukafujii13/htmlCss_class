@@ -1,0 +1,193 @@
+@import 'header';
+
+$color-primary: #ff0;
+
+// Mixings
+
+//@ - directive
+@mixin transform {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@mixin transform2($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin heading($size) {
+    @if $size == large {
+        font-size: 4rem;
+    }
+    @else if $size == medium {
+        font-size: 2rem;
+    }
+    @else{
+        font-size: 1rem;
+    }
+}
+
+
+
+//@for - through(10含む）
+@for $i from 1 through 10 {
+    .list-#{$i} {
+        width: 5px * $i;
+    }
+}
+
+//@for - to(10含まない)
+@for $i from 1 to 10 {
+    .line-#{$i} {
+        width: 5px * $i;
+    }
+}
+
+//@while
+$x: 1;
+@while $x < 6 {
+    .listloop-#{$x} {
+        width: 2px * $x;
+    }
+
+    $x: $x + 1;
+}
+
+
+//Function
+@function add-numbers($first-number, $second-number){
+    @return $first-number + $second-number;
+}
+
+// Interpolation
+// #{$variable_name} - used to concatenate string
+@mixin interpolation($editable, $val, $val2, $prop, $prop2){
+    background-#{$editable}: $val;
+    position: $val2;
+    #{$prop}: 0px;
+    #{$prop2}: 0px;
+}
+
+// Placeholder
+// % - used to create a placeholder selector
+
+%placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #ff0;
+    @extend %placeholder;
+}
+
+p {
+    @extend %placeholder;
+}
+
+
+
+//Nesting
+.navbar {
+    background-color: red;
+    padding: add-numbers(5px, 10px);
+    @include transform;
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        @include transform;
+    }
+
+    li {
+        text-align: center;
+        margin: 1rem;
+        @include transform2(rotate(45deg));
+    }
+
+    
+
+}
+
+.button {
+    background-color: #00f;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button-secondary {
+    @extend .button;
+    background-color: #f00;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 32px;
+
+    &--red {
+        background-color: #f00;
+    }
+    
+    &:hover {
+        background-color: #00f;
+    }
+    
+}
+
+h1 {
+    @include heading(large);
+}
+
+h6 {
+    @include heading(small)
+}
+
+.block1{
+    @include interpolation("image", url('img.jpg'), "absolute", "top", "right");
+}
+
+.block2{
+    @include interpolation("color", gray, "absolute", "top", "right");
+}
+
+
+
+@mixin for-phone-only {
+    @media (max-width: 599px){@content;}
+}
+
+@mixin for-tablet-portrait-up {
+    @media (max-width: 600px){@content;}
+}
+
+@mixin for-tablet-landscape-up {
+    @media (max-width: 600px){@content;}
+}
+
+@mixin for-tablet-desktop-up {
+    @media (max-width: 600px){@content;}
+}
+
+@mixin for-big-tablet-desktop-up {
+    @media (max-width: 600px){@content;}
+}
+
+.header-title {
+    font-size: 2rem;
+
+    @include for-phone-only{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+

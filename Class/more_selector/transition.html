@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #333;
+        height: 100vh;
+    }
+
+    div{
+        position: relative;
+        top: 40%;
+        margin: 10px auto;
+        background-color: white;
+        width: 60px;
+        height: 60px;
+
+        /* transition-duration: 1s;
+        transition-timing-function: ease-in-out; */
+        transition: all 0.5s cubic-bezier(cubic-bezier(1,.19,.97,.61));
+    }
+
+    div:hover{
+        background-color: pink;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+</style>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>
